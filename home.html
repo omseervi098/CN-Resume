@@ -1,0 +1,438 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+    <script type="text/javascript">
+        function validate() {
+
+            if (document.myForm.Name.value == "") {
+                alert("Please provide your name!");
+                document.myForm.Name.focus();
+                return false;
+            }
+            if (document.myForm.EMail.value == "") {
+                alert("Please provide your Email!");
+                document.myForm.EMail.focus();
+                return false;
+            }
+            if (document.myForm.gender.value == "") {
+                alert("Please provide your Gender!");
+                return false;
+            }
+            if (document.myForm.Zip.value == "" || isNaN(document.myForm.Zip.value) ||
+                document.myForm.Zip.value.length != 6) {
+
+                alert("Please provide a zip in the format ######.");
+                document.myForm.Zip.focus();
+                return false;
+            }
+            if (document.myForm.Country.value == "-1") {
+                alert("Please provide your country!");
+                return false;
+            }
+            return (true);
+        }
+
+        function validateEmail() {
+            var emailID = document.myForm.EMail.value;
+            atpos = emailID.indexOf("@");
+            dotpos = emailID.lastIndexOf(".");
+
+            if (atpos < 1 || (dotpos - atpos < 2)) {
+                alert("Please enter correct email ID")
+                document.myForm.EMail.focus();
+                return false;
+            }
+            return (true);
+        }
+    </script>
+</head>
+
+<body>
+    <header class="main-header text-center">
+
+        <nav class="navbar menu navbar-expand-lg navbar-dark fixed-top bg-dark">
+            <div class="container-fluid">
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo01" aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                  </button>
+                <div class="collapse navbar-collapse" id="navbarTogglerDemo01">
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="#">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#About">About Me</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#Skills">Skills</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#Education">Education</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#Work-experience">Work Experience</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#projects">Portfolio</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#Contact">Contact us</a>
+                        </li>
+
+                    </ul>
+                </div>
+            </div>
+        </nav>
+
+
+    </header>
+    <div id="header-img" class="hero-image">
+        <div id="to-hide">Hello</div>
+        <div id="header-social">
+            <div class="text-center">
+                <h1 id="my-name">Omprakash Choudhary
+                </h1>
+            </div>
+        </div>
+        <ul class="social-bar social-list social-icons">
+            <li class="social-list">
+                <a href="https://www.linkedin.com/in/omprakash-choudhary-46b996165/" target="_blank">
+                    <img src="https://ninjasfiles.s3.amazonaws.com/asset_0000000000000015_1549330433_linkedin-logo.png" alt="" />
+                </a>
+            </li>
+            <li class="social-list">
+                <a href="https://github.com/omseervi098" target="_blank">
+                    <img src="https://icon-library.com/images/github-icon-white/github-icon-white-6.jpg" alt="" />
+                </a>
+            </li>
+            <li class="social-list">
+                <a href="mailto:omseervi098@gmail.com" target="_blank">
+                    <img src="https://ninjasfiles.s3.amazonaws.com/asset_0000000000000023_1549823282_google-plus-logo.png" alt="" />
+                </a>
+            </li>
+            <li class="social-list">
+                <a href="https://www.facebook.com/profile.php?id=100058590546358" target="_blank">
+                    <img src="https://ninjasfiles.s3.amazonaws.com/asset_0000000000000014_1549330414_facebook-logo.png" alt="" />
+                </a>
+            </li>
+        </ul>
+    </div>
+    <article>
+        <section id="About">
+            <div id="my-image"><img src="image/1619416679537.jpeg"></div>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. <span>Delectus</span>, impedit nulla vel, recusandae, nostrum facere quae velit adipisci nam optio reiciendis. Earum praesentium doloribus vitae. Aut, in. Aliquid maiores fugiat molestiae,
+                consequatur iure dolor quidem modi natus deserunt esse error placeat <span>recusandae</span>. Eum, doloribus quo quisquam praesentium ratione facilis nihil maiores laboriosam expedita saepe distinctio nesciunt impedit eos commodi rem aspernatur
+                eligendi. Aliquam, odit illo! Blanditiis, <span>labore beatae</span>. Quasi, commodi?</p>
+        </section>
+        <section id="Skills">
+            <h1 class="section-heading mb75px">
+                <span><i class="fas fa-chalkboard-teacher"></i></span>
+                <span><img class="icon" src="svg/skills.svg">SKILLS</span>
+            </h1>
+            <div class="skills-display">
+                <div class="skill-progress ">
+                    <div class="progress mbblue">
+                        <div class="skill-name"><span>C++
+                    </span></div>
+                    </div>
+                </div>
+                <div class="skill-progress ">
+                    <div class="progress mbgreen">
+                        <div class="skill-name"><span>C
+                    </span></div>
+                    </div>
+                </div>
+                <div class="skill-progress">
+                    <div class="progress mbred">
+                        <div class="skill-name"><span>Python
+                     </span></div>
+                    </div>
+                </div>
+                <div class="skill-progress">
+                    <div class="progress mbgreen">
+                        <div class="skill-name"><span>HTML
+                    </span></div>
+                    </div>
+                </div>
+                <div class="skill-progress">
+                    <div class="progress mbbrown">
+                        <div class="skill-name"><span>CSS
+                    </span></div>
+                    </div>
+                </div>
+                <div class="skill-progress">
+                    <div class="progress" id="bootstrap-skills">
+                        <div class="skill-name"><span>Bootstrap
+                    </span></div>
+                    </div>
+                </div>
+        </section>
+        <Section id="Education">
+            <h1 class="section-heading mb75px">
+                <img class="icon" src="svg/education.svg"> Education
+            </h1>
+            <div class="timeline">
+                <div class="timeline-box">
+                    <div class="work-heading">
+                        <div class="work-icon"><img src="https://th.bing.com/th/id/OIP.qeZPiwI4dDQSC_gIVI8JrAHaGq?pid=ImgDet&rs=1"></div>
+                        <div class="detail">
+                            <div class="role">B.Tech (Data Science)</div>
+                            <p>
+                                <div class="Company-name">
+                                    DJ Sanghvi
+                                </div>
+                                <div class="time-duration">
+                                    2020 -2024
+                                </div>
+                            </p>
+                        </div>
+                    </div>
+                    <div class="responsibility">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores similique tempora fugiat mollitia esse alias excepturi at
+                    </div>
+                </div>
+                <div class="timeline-box">
+                    <div class="work-heading">
+                        <div class="work-icon"><img class="work-icon" src="https://www.pngitem.com/pimgs/m/292-2923379_undergraduate-education-logo-for-education-png-transparent-png.png"></div>
+                        <div class="detail">
+                            <div class="role">HSC</div>
+                            <p>
+                                <div class="Company-name">
+                                    Padmavati Venkatesh Clg
+                                </div>
+                                <div class="time-duration">
+                                    2018 - 2020
+                                </div>
+                            </p>
+                        </div>
+                    </div>
+                    <div class="responsibility">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores similique tempora fugiat mollitia esse alias excepturi at
+                    </div>
+                </div>
+                <div class="timeline-box">
+                    <div class="work-heading">
+                        <div class="work-icon"><img class="work-icon" src="https://th.bing.com/th/id/OIP.byGEx3Dh_gI2HOv3MQyLyQHaHN?pid=ImgDet&rs=1"></div>
+                        <div class="detail">
+                            <div class="role">SSC</div>
+                            <p>
+                                <div class="Company-name">
+                                    Sadhana Vidya Mandir
+                                </div>
+                                <div class="time-duration">
+                                    upto 2018
+                                </div>
+                            </p>
+                        </div>
+                    </div>
+                    <div class="responsibility">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores similique tempora fugiat mollitia esse alias excepturi at
+                    </div>
+                </div>
+                <div class="timeline-divider">
+                    <div class="timeline-traveler">
+                        <img class="icon" src="svg/school.svg">
+                    </div>
+                </div>
+            </div>
+        </Section>
+        <section id="Work-experience">
+            <h1 class="section-heading mb75px">
+                <img class="icon" src="svg/work-experience.svg"> Work-Experience
+            </h1>
+            <div class="timeline">
+                <div class="timeline-box">
+                    <div class="work-heading">
+                        <div class="work-icon"><img src="https://www.codingninjas.in/assets-landing/images/CNLOGO.svg"></div>
+                        <div class="detail">
+                            <div class="role">Teaching Assistant</div>
+                            <p>
+                                <div class="Company-name">
+                                    Coding Ninjas
+                                </div>
+                                <div class="time-duration">
+                                    Feb 2022 - May2022
+                                </div>
+                            </p>
+                        </div>
+                    </div>
+                    <div class="responsibility">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores similique tempora fugiat mollitia esse alias excepturi at
+                    </div>
+                </div>
+                <div class="timeline-box">
+                    <div class="work-heading">
+                        <div class="work-icon"><img src="https://www.codingninjas.in/assets-landing/images/CNLOGO.svg"></div>
+                        <div class="detail">
+                            <div class="role">Teaching Assistant</div>
+                            <p>
+                                <div class="Company-name">
+                                    Coding Ninjas
+                                </div>
+                                <div class="time-duration">
+                                    Feb 2022 - May2022
+                                </div>
+                            </p>
+                        </div>
+                    </div>
+                    <div class="responsibility">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores similique tempora fugiat mollitia esse alias excepturi at
+                    </div>
+                </div>
+                <div class="timeline-box">
+                    <div class="work-heading">
+                        <div class="work-icon"><img src="https://www.codingninjas.in/assets-landing/images/CNLOGO.svg"></div>
+                        <div class="detail">
+                            <div class="role">Teaching Assistant</div>
+                            <p>
+                                <div class="Company-name">
+                                    Coding Ninjas
+                                </div>
+                                <div class="time-duration">
+                                    Feb 2022 - May2022
+                                </div>
+                            </p>
+                        </div>
+                    </div>
+                    <div class="responsibility">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores similique tempora fugiat mollitia esse alias excepturi at
+                    </div>
+                </div>
+                <div class="timeline-divider">
+                    <div class="timeline-traveler">
+                        <img class="icon" src="svg/timeline-traveler.svg">
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section id="Projects">
+            <h1 class="section-heading mb75px"><img class="icon" src="svg/portfolio.svg">Portfolio</h1>
+            <div id="projects">
+                <div class="project1">
+                    <img src="https://ninjasfiles.s3.amazonaws.com/asset_0000000000000025_1550237330_codezen_2.png
+                    ">
+                    <div class="project-detail">
+                        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eius, eaque.
+                    </div>
+                </div>
+                <div class="project1">
+                    <img src="https://ninjasfiles.s3.amazonaws.com/asset_0000000000000025_1550237330_codezen_2.png
+                        ">
+                    <div class="project-detail">
+                        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eius, eaque.
+                    </div>
+                </div>
+
+                <div class="project1">
+                    <img src="https://ninjasfiles.s3.amazonaws.com/asset_0000000000000025_1550237330_codezen_2.png
+                        ">
+                    <div class="project-detail">
+                        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eius, eaque.
+                    </div>
+                </div>
+                <div class="project1">
+                    <img src="https://ninjasfiles.s3.amazonaws.com/asset_0000000000000024_1550237299_codezen.png
+                        ">
+                    <div class="project-detail">
+                        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eius, eaque.
+                    </div>
+                </div>
+                <div class="project1">
+                    <img src="https://ninjasfiles.s3.amazonaws.com/asset_0000000000000024_1550237299_codezen.png">
+                    <div class="project-detail">
+                        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eius, eaque.
+                    </div>
+                </div>
+                <div class="project1">
+                    <img src="https://ninjasfiles.s3.amazonaws.com/asset_0000000000000024_1550237299_codezen.png">
+                    <div class="project-detail">
+                        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eius, eaque.
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section id="Contact">
+            <h1 class="section-heading mb75px"><img class="icon" src="svg/1.svg"></i> Contact
+            </h1>
+            <div id="general-details">
+                <div id="for-form">
+                    <form action="/cgi-bin/test.cgi" name="myForm" onsubmit="return(validate());">
+                        <div class="mb-3">
+                            <input type="text" class="form-control " id="exampleFormControlInput" name="Name" placeholder="Your Name ">
+                        </div>
+                        <div class="mb-3">
+                            <input type="email" class="form-control" id="exampleFormControlInput1" name="EMail" placeholder="Your Email">
+                        </div>
+                        <div class="mb-3">
+                            <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" placeholder="Messege"></textarea>
+                        </div>
+                        <div class="mb-3 gender">
+                            <span>Gender:&nbsp;</span>
+                            <input name="gender" type="radio" value="Male">Male&nbsp;
+                            <input name="gender" type="radio" value="Female">Female
+                        </div>
+                        <div class="mb-3">
+                            <input type="text" class="form-control" id="exampleFormControlInput1" name="Zip" placeholder="Zip Code" />
+                        </div>
+                        <div class="mb-3 drop-down">
+                            <span>Country</span>
+                            <select name="Country">
+                                <option value = "-1" selected>[choose yours]</option>
+                                <option value = "1">USA</option>
+                                <option value = "2">UK</option>
+                                <option value = "3">INDIA</option>
+                             </select>
+                        </div>
+                        <div id="submit-btn">
+                            <button class="button" type="submit" value="submit">Send Messege</button>
+                            <button class="button" type="reset" value="reset">Clear</button>
+                        </div>
+                    </form>
+                </div>
+                <div id="details">
+                    <div id="get-in-touch">
+                        <h2>Get in Touch</h2>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci laborum optio doloremque nemo repellat corporis officiis odit!</p>
+                    </div>
+                    <div id="address">
+                        <h2>My address</h2>
+                        <p><img src="svg/2.svg">Thane, India<br><img src="svg/3.svg">+919653385948<br>
+                            <img src="svg/4.svg">omseervi098@gmail.com</p>
+                    </div>
+                </div>
+
+            </div>
+            <ul class="social-list text-center social-icons">
+                <li class="social-list">
+                    <a href="https://www.linkedin.com/in/omprakash-choudhary-46b996165/" target="_blank">
+                        <img src="https://ninjasfiles.s3.amazonaws.com/asset_0000000000000015_1549330433_linkedin-logo.png" alt="" />
+                    </a>
+                </li>
+                <li class="social-list">
+                    <a href="https://github.com/omseervi098" target="_blank">
+                        <img src="https://icon-library.com/images/github-icon-white/github-icon-white-6.jpg" alt="" />
+                    </a>
+                </li>
+                <li class="social-list">
+                    <a href="mailto:omseervi098@gmail.com" target="_blank">
+                        <img src="https://ninjasfiles.s3.amazonaws.com/asset_0000000000000023_1549823282_google-plus-logo.png" alt="" />
+                    </a>
+                </li>
+                <li class="social-list">
+                    <a href="https://www.facebook.com/profile.php?id=100058590546358" target="_blank">
+                        <img src="https://ninjasfiles.s3.amazonaws.com/asset_0000000000000014_1549330414_facebook-logo.png" alt="" />
+                    </a>
+                </li>
+            </ul>
+        </section>
+    </article>
+</body>
+
+</html>
