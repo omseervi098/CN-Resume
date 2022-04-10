@@ -228,6 +228,23 @@ section:nth-child(2n+1) {
     width: 73%;
 }
 
+@media screen and (max-width:100px) {
+    .skills-display {
+        width: 70%;
+        height: 200px;
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+    .skill-progress {
+        width: 8rem;
+        height: 2rem;
+        background-color: #b9b9b9;
+        border-radius: 0.8rem;
+    }
+}
+
 
 /*timeline*/
 
