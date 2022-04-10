@@ -178,11 +178,12 @@ section:nth-child(2n+1) {
 
 .skills-display {
     width: 70%;
-    height: 200px;
+    height: auto;
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: space-between;
+    margin-bottom: 20px;
 }
 
 .skill-progress {
@@ -190,6 +191,7 @@ section:nth-child(2n+1) {
     height: 2rem;
     background-color: #b9b9b9;
     border-radius: 0.8rem;
+    margin: 5px;
 }
 
 .progress {
@@ -226,23 +228,6 @@ section:nth-child(2n+1) {
 
 #bootstrap-skills {
     width: 73%;
-}
-
-@media screen and (max-width:100px) {
-    .skills-display {
-        width: 70%;
-        height: 200px;
-        display: flex;
-        flex-direction: column;
-        flex-wrap: wrap;
-        justify-content: space-between;
-    }
-    .skill-progress {
-        width: 8rem;
-        height: 2rem;
-        background-color: #b9b9b9;
-        border-radius: 0.8rem;
-    }
 }
 
 
