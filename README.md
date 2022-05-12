@@ -1,2 +1,3 @@
 # CN-Resume
-A static webpage built using HTML and CSS
+A basic static webpage built using HTML and CSS <br/>
+
